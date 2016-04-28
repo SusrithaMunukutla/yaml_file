@@ -1,0 +1,50 @@
+# couchbase:
+  image: couch_base
+  ports:
+    - 8091:8091
+  volumes_from:
+    - linking_volume
+  environment:
+    BUCKET: sync_gateway
+    CB_USER: Administrator
+    CB_PASS: pasword
+
+couchdb:
+  image: couchdb_appconfig
+  ports:
+    - 5984:5984
+  links:
+    - couchbase
+    - sync_gateway
+    
+sync_gateway:
+  image: sync_gateway
+  ports:
+    - 4984:4984
+    - 4985:4985
+  links:
+    - couchbase
+    
+    
+odata:
+  image: joseph1994/couchbase-odata-connector-java
+  ports:
+    - 8888:8080
+  links:
+    - couchbase
+    - sync_gateway
+    - couchdb
+    
+ionic:
+  tty: true
+  stdin_open: true
+  image: ionicapplication
+  ports:
+    - 8100:8100
+  entrypoint: /entrypoint.sh
+  links:
+    - couchbase
+    - sync_gateway
+    - couchdb
+    - odata
+    
