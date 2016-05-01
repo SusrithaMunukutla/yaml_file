@@ -31,8 +31,10 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       Make any changes in your git repository and commit job gets triggered and builds.
 
 Limitations :
- -> Before executing shell make sure all our containers are stopped and killed orelse will get SPECIFIC PORT IS ALREADY ALLOCATED error when job is triggered.
- 
+
+ -> Before executing shell make sure all our containers are stopped and killed orelse will get  error when job is triggered.
+                           SPECIFIC PORT IS ALREADY ALLOCATED 
+
  -> If apk file has to be pushed to git following are the commands required.Open terminal->go into ionic container using
             docker exec -it <container-id> bash
             Then execute following commands and in between it prompts to give credentails -> enter your username and password 
