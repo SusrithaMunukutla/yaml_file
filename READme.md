@@ -1,4 +1,5 @@
 Create an instance using AMI(Jenkins,docker,git,dockerimages)
+
 Now have to check whether jenkins is up and running.Open 
                           <ipaddress>:8080
 Jenkins dashboard will be opened now we have to manage plugins.Following are the plugins that are to be installed
