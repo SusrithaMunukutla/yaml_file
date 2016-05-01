@@ -39,7 +39,8 @@ Limitations :
  -> If apk file has to be pushed to git following are the commands required.Open terminal->go into ionic container using
  
             docker exec -it <container-id> bash
-            Then execute following commands and in between it prompts to give credentails -> enter your username and password 
+            Then execute following commands and in between it prompts to give credentails 
+                 -> enter your username and password 
             
                    git init
                    git add .
