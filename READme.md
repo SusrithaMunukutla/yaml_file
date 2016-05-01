@@ -33,16 +33,19 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
 Limitations :
 
  -> Before executing shell make sure all our containers are stopped and killed orelse will get  error when job is triggered.
+                          
                            SPECIFIC PORT IS ALREADY ALLOCATED 
 
  -> If apk file has to be pushed to git following are the commands required.Open terminal->go into ionic container using
+ 
             docker exec -it <container-id> bash
             Then execute following commands and in between it prompts to give credentails -> enter your username and password 
-             git init
-             git add .
-             git commit -m "First commit"
-             git remote add testt https://github.com/samhitha30/Sensor-app.git
-             git push -f testt master
+            
+                   git init
+                   git add .
+                   git commit -m "First commit"
+                   git remote add testt https://github.com/samhitha30/Sensor-app.git
+                   git push -f testt master
 
          
               
