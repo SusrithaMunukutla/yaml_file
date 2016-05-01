@@ -13,6 +13,8 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
       docker images
       docker ps
   Now our requirement is this job contains a sample ionic application which is developed using dockerfiles so if any change is happened to the code jenkins should help us to trigger and update our application.Following are the steps to be followed :
+  
+  
       Create a job in jenkins for example sample_application.
       Now configure in source code management select git :
           Add repositories where our sample ionic application is present and dockerfile
