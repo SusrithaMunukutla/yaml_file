@@ -8,7 +8,8 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
   
   - Github Plugin
   - Docker plugin
- 4. Open a terminal or create a job to check what images are present and containers are running : 
+  
+4. Open a terminal or create a job to check what images are present and containers are running : 
 
 
       docker images
