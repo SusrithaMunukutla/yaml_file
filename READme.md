@@ -16,8 +16,24 @@ Jenkins dashboard will be opened now we have to manage plugins.Following are the
                  https://github.com/samhitha30/Ionic_script.git
           Add credentails by clicking Add -> Include username,password,description .
       Now in Build trigger select Build when a change is pushed to GitHub, when any changes made to our git repository and commit,jenkins helps to trigger and build job with updated code.
-      Now in Build -> Add build step -> Execute Shell 
-                docker run -i -d -p 8100:8100 --entrypoint=/entrypoint.sh <image-tag> -s
-         Before executing this job make sure no container is running.
+      Now in Build -> Add build step -> Execute Shell
+          Before executing this job make sure no container is running.
               docker rm -f $(docker ps -aq)
+                docker run -i -d -p 8100:8100 --entrypoint=/entrypoint.sh <image-tag> -s
+      Now save the job and build 
+                       or
+      Make any changes in your git repository and commit job gets triggered and builds.
+
+Limitations :
+ -> Before executing shell make sure all our containers are stopped and killed orelse will get SPECIFIC PORT IS ALREADY ALLOCATED error when job is triggered.
+ -> If apk file has to be pushed to git following are the commands required.Open terminal->go into ionic container using
+            docker exec -it <container-id> bash
+            Then execute following commands and in between it prompts to give credentails -> enter your username and password 
+             git init
+             git add .
+             git commit -m "First commit"
+             git remote add testt https://github.com/samhitha30/Sensor-app.git
+             git push -f testt master
+
+         
               
