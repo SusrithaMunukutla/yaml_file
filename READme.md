@@ -1,18 +1,19 @@
-Create an instance using AMI(Jenkins,docker,git,dockerimages)
+1.Create an instance using AMI(Jenkins,docker,git,dockerimages)
 
-Now have to check whether jenkins is up and running.Open 
+2.Now have to check whether jenkins is up and running.Open 
                           <ipaddress>:8080
 Jenkins dashboard will be opened now we have to manage plugins.Following are the plugins that are to be installed
 
-  Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
+3.Goto dashboard-> manage jenkins->manage plugins->available (install without restart)
   
   - Github Plugin
   - Docker plugin
-  Open a terminal or create a job to check what images are present and containers are running : 
+ 4. Open a terminal or create a job to check what images are present and containers are running : 
 
       docker images
       docker ps
-  Now our requirement is this job contains a sample ionic application which is developed using dockerfiles so if any change is happened to the code jenkins should help us to trigger and update our application.Following are the steps to be followed :
+      
+5.Now our requirement is this job contains a sample ionic application which is developed using dockerfiles so if any change is happened to the code jenkins should help us to trigger and update our application.Following are the steps to be followed :
   
   
       1. Create a job in jenkins for example sample_application.
