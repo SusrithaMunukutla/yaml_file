@@ -1,4 +1,4 @@
-# couchbase:
+couchbase:
   image: couch_base
   ports:
     - 8091:8091
