@@ -2,6 +2,9 @@
   image: couch_base
   ports:
     - 8091:8091
+    - 8092:8092
+    - 8093:8093
+    - 11210:11210
   volumes_from:
     - linking_volume
   environment:
@@ -25,26 +28,7 @@ sync_gateway:
   links:
     - couchbase
     
+
     
-odata:
-  image: joseph1994/couchbase-odata-connector-java
-  ports:
-    - 8888:8080
-  links:
-    - couchbase
-    - sync_gateway
-    - couchdb
-    
-ionic:
-  tty: true
-  stdin_open: true
-  image: ionicapplication
-  ports:
-    - 8100:8100
-  entrypoint: /entrypoint.sh
-  links:
-    - couchbase
-    - sync_gateway
-    - couchdb
-    - odata
+
     
