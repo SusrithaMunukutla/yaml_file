@@ -18,7 +18,7 @@ couchdb:
     - 5984:5984
   links:
     - couchbase
-    - sync_gateway
+ #   - sync_gateway
     
 sync_gateway:
   image: sync_gateway
