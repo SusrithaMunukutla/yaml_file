@@ -13,7 +13,7 @@ couchbase:
     CB_PASS: password
 
 couchdb:
-  image: couchdb_appconfig
+  image: couchdb_config
   ports:
     - 5984:5984
   links:
