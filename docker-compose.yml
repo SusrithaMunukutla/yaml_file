@@ -28,6 +28,10 @@ sync_gateway:
   links:
     - couchbase
     
+talend :
+  image: talendtest
+  
+    
     
 
     
