@@ -29,6 +29,8 @@ sync_gateway:
     - couchbase
     
 talend :
+  tty: true
+  stdin_open: true
   image: talendtest
   
   
