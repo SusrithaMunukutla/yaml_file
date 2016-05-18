@@ -5,8 +5,8 @@ couchbase:
     - 8092:8092
     - 8093:8093
     - 11210:11210
-  volumes_from:
-    - linking_volume_couchbase
+  #volumes_from:
+   # - linking_volume_couchbase
   environment:
     BUCKET: sync_gateway
     CB_USER: Administrator
